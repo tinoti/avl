@@ -9,4 +9,4 @@ RUN npm run build --prod
 # Stage 2: Serve the Angular application with Nginx
 FROM nginx:1.19
 COPY --from=build /app/dist/your-app-name /usr/share/nginx/html
-COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
+COPY nginx-custom.conf /etc/nginx/conf.d/default.conf
