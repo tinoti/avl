@@ -1,0 +1,55 @@
+.p-toolbar {
+  background-color: #333;
+  color: #fff;
+}
+
+.p-toolbar-title {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+button {
+  background-color: #555;
+  border: none;
+  color: #fff;
+}
+
+p-table {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+th {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+td {
+  padding: 0.5rem;
+}
+
+p-card {
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.active-icon {
+  color: green;
+}
+
+.inactive-icon {
+  color: red;
+}
+
+.card-content {
+  max-height: 500px;
+  overflow-y: auto;
+}

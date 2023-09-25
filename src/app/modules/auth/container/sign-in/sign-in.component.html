@@ -1,0 +1,50 @@
+<div class="centered-container">
+  <p class="title-text">Sign in to AVL Vehicle Overview App</p>
+  <p-card>
+    <form [formGroup]="form" class="form-content">
+      <input
+        type="text"
+        pInputText
+        formControlName="username"
+        placeholder="Username"
+      />
+      <p-message
+        *ngIf="
+          form.get('username')?.hasError('required') &&
+          (form.get('username')?.touched || form.get('username')?.dirty)
+        "
+        severity="error"
+        text="Username is required"
+      ></p-message>
+      <p-password
+        formControlName="password"
+        placeholder="Password"
+        [feedback]="false"
+      ></p-password>
+
+      <p-message
+        *ngIf="
+          form.get('password')?.hasError('shortLength') &&
+          (form.get('password')?.touched || form.get('password')?.dirty)
+        "
+        severity="error"
+        text="Password must be at least 8 characters long."
+      ></p-message>
+
+      <p-message
+        *ngIf="
+          form.get('password')?.hasError('complexity') &&
+          (form.get('password')?.touched || form.get('password')?.dirty)
+        "
+        severity="error"
+        text="Password must contain at least one uppercase letter, lowercase letter, number, and special character (e.g., !, @, #, $, etc.)."
+      ></p-message>
+
+      <button
+        pButton
+        label="Sign In"
+        (click)="signIn(form.value.username)"
+      ></button>
+    </form>
+  </p-card>
+</div>

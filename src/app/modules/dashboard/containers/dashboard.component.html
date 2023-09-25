@@ -1,0 +1,19 @@
+<app-toolbar
+  [title]="'AVL Vehicle Overview App'"
+  [username]="authService.username"
+  (signOut)="onSignOut()"
+></app-toolbar>
+
+<div class="centered-container">
+  <p-card>
+    <div class="card-content">
+      <app-vehicle-search
+        [(searchTerm)]="searchTerm"
+        (searchTermChange)="onSearch()"
+      ></app-vehicle-search>
+      <app-vehicle-table
+        [vehicles]="filteredVehicles$ | async"
+      ></app-vehicle-table>
+    </div>
+  </p-card>
+</div>

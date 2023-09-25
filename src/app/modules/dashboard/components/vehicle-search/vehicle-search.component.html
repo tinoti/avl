@@ -1,0 +1,11 @@
+<div class="search-bar">
+  <span>
+    <input
+      type="text"
+      pInputText
+      [(ngModel)]="searchTerm"
+      (input)="onSearchChange()"
+      placeholder="Search vehicles..."
+    />
+  </span>
+</div>
