@@ -1,7 +1,9 @@
 ## Setup
 
+```
 npm install
 ng serve
+```
 
 ## Overview
 
@@ -12,3 +14,5 @@ The app provides a sign in page which requiers a username and a complex password
 Container-presentation pattern is used. There are two main modules, auth and dashboard. For simplicity, Auth is using a single smart component to both render the view and manipulate data. Dashboard is using three components, toolbar, vehicle-search and vehicle-table for view and one dashboard smart container for data manipulation. Shared contains the primeng module, which contains all primeng components that are used in the app. It also contains some modules that are used across the app.
 
 ## Live link
+
+https://avl-34d33.web.app/
