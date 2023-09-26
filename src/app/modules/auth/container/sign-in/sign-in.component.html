@@ -44,6 +44,7 @@
         pButton
         label="Sign In"
         (click)="signIn(form.value.username)"
+        [disabled]="form.invalid"
       ></button>
     </form>
   </p-card>
